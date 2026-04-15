@@ -264,8 +264,10 @@ export default function ProductModal({ open, productKey, editingId, cartItems, o
                         const f = FLAVORS.find(x => x.name === fl) || { emoji: '?', color: '#eee', name: fl };
                         return (
                           <>
-                            <div className="slot-fimg" style={{ background: f.color }}>
-                              <span style={{ fontSize: 20 }}>{f.emoji}</span>
+                            <div className="slot-fimg" style={{ background: f.image ? 'transparent' : f.color }}>
+                              {f.image
+                                ? <img src={f.image} alt={f.name} style={{ width: 50, height: 50, borderRadius: '50%', objectFit: 'cover' }} />
+                                : <span style={{ fontSize: 20 }}>{f.emoji || '🍮'}</span>}
                             </div>
                             <div className="slot-label">{f.name}</div>
                             <button type="button" className="slot-x" onClick={e => clearSlot(i, e)}>×</button>

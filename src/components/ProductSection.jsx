@@ -1,5 +1,5 @@
 import { META } from '../data/products';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 function ProductCard({ pKey, meta, cartQty, onOpen }) {
   const priceText = meta.price > 0
@@ -11,7 +11,11 @@ function ProductCard({ pKey, meta, cartQty, onOpen }) {
   return (
     <div className="pcard rev" onClick={() => onOpen(pKey)}>
       {cartQty > 0 && <span className="pcart-b show">{cartQty}</span>}
-      <div className="pimg">{meta.emoji}</div>
+      <div className="pimg">
+        {meta.image
+          ? <img src={meta.image} alt={meta.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          : meta.emoji}
+      </div>
       <div className="pname">{meta.name}</div>
       <div className="pprice">{priceText}</div>
       <div className="pstars">★★★★★</div>
@@ -21,8 +25,6 @@ function ProductCard({ pKey, meta, cartQty, onOpen }) {
 }
 
 export default function ProductSection({ cart, onOpenModal, onOpenCart, onScrollToOrder }) {
-  const revRef = useRef(null);
-
   useEffect(() => {
     const els = document.querySelectorAll('#shop .rev');
     const ro = new IntersectionObserver(es => {

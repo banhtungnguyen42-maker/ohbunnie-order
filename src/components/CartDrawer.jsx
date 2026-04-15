@@ -19,12 +19,17 @@ export default function CartDrawer({ open, cart, onClose, onRemove, onCheckout }
           ) : (
             cart.map(item => {
               const m = META[item.pKey];
-              const emoji = m ? m.emoji : (item.type === 'gift' ? '🎁' : '📦');
               const det = [item.size, item.flavor, item.config].filter(Boolean).join(' · ');
               const pr = item.type === 'gift' ? 'Tặng' : (item.lineTotal ? money(item.lineTotal) : 'Báo giá');
+              const imgSrc = m?.image || null;
+              const fallback = m ? m.emoji : (item.type === 'gift' ? '🎁' : '📦');
               return (
                 <div className="citem" key={item.id}>
-                  <div className="ci-img">{emoji}</div>
+                  <div className="ci-img">
+                    {imgSrc
+                      ? <img src={imgSrc} alt={item.name} style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover' }} />
+                      : fallback}
+                  </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div className="ci-name">{item.name}</div>
                     {det && <div className="ci-det">{det}</div>}

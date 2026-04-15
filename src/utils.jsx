@@ -11,18 +11,22 @@ export const genOId = () => {
   return `OHB-${y}${m}${day}-${t}`;
 };
 
-export const fHtml = (f, sz = 58) =>
-  `<div style="width:${sz}px;height:${sz}px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:${Math.round(sz * 0.44)}px;background:${f.color}">${f.emoji}</div>`;
-
-// JSX version of flavor icon
+// JSX version of flavor icon — dùng ảnh thật nếu có, fallback emoji
 export const FlavorIcon = ({ f, sz = 58 }) => (
-  <div style={{
-    width: sz, height: sz,
-    borderRadius: '50%',
-    display: 'flex', alignItems: 'center', justifyContent: 'center',
-    fontSize: Math.round(sz * 0.44),
-    background: f.color,
-  }}>
-    {f.emoji}
-  </div>
+  f.image
+    ? <img
+        src={f.image}
+        alt={f.name}
+        style={{ width: sz, height: sz, borderRadius: '50%', objectFit: 'cover', flexShrink: 0, display: 'block' }}
+      />
+    : <div style={{
+        width: sz, height: sz,
+        borderRadius: '50%',
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        fontSize: Math.round(sz * 0.44),
+        background: f.color,
+        flexShrink: 0,
+      }}>
+        {f.emoji || '🍮'}
+      </div>
 );
