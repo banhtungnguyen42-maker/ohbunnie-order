@@ -1,3 +1,5 @@
+import ChromaKeyVideo from './ChromaKeyVideo';
+
 export default function Hero({ onGoShop, onGoAbout }) {
   return (
     <section className="hero" style={{ padding: 0 }}>
@@ -18,15 +20,11 @@ export default function Hero({ onGoShop, onGoAbout }) {
         </div>
       </div>
 
-      {/* Bunny Mascot nhảy múa */}
-      <div className="hero-right">
-        <div className="bunny-stage" style={{ borderBottom: 'none', height: '420px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', pointerEvents: 'none' }}>
-          <video
+      {/* Bunny Mascot nhảy múa (Với công nghệ tự tách phông xanh) */}
+      <div className="hero-right" style={{ position: 'relative' }}>
+        <div className="bunny-stage" style={{ position: 'absolute', bottom: 0, right: 0, width: '150%', height: '140%', display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end', pointerEvents: 'none', transform: 'translate(10%, 15%)' }}>
+          <ChromaKeyVideo
             src="/images/mascot.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
             className="bunny-mascot"
           />
         </div>
