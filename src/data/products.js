@@ -25,4 +25,4 @@ export const BANK = {
 };
 
 // URL Web App Google Apps Script của bạn
-export const API_URL = 'https://script.google.com/macros/s/AKfycbzLO4X6XIDJVw3yYHj1tHoBgoZwoO_CQVT5IvnadogxH2kA0FZpGzTaDcDapKsCXMIj/exec';
+export const API_URL = 'https://script.google.com/macros/s/AKfycbyORZfXUCw4Wipbuw0yPdlgaO4HIt_57-dZ2nQ5LF1j_FhG3BA3vowP8cK_LTaGCBZc/exec';
