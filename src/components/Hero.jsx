@@ -1,3 +1,5 @@
+import ChromaKeyVideo from './ChromaKeyVideo';
+
 export default function Hero({ onGoShop, onGoAbout }) {
   return (
     <section className="hero" style={{ padding: 0 }}>
@@ -21,12 +23,8 @@ export default function Hero({ onGoShop, onGoAbout }) {
       {/* Bunny Mascot nhảy múa (Ảnh nền đã tách trong suốt) */}
       <div className="hero-right">
         <div className="bunny-stage">
-          <video
-            src="/images/mascot-rb.webm"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <ChromaKeyVideo
+            src="/images/mascot-green.webm"
             className="bunny-mascot"
           />
         </div>
