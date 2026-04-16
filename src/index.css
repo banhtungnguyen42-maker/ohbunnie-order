@@ -1963,10 +1963,9 @@ footer p { font-size: 14px; line-height: 1.7; opacity: .75 }
 /* Bệ đỡ Thỏ (Tạo Vạch Hồng làm đất đứng) */
 .bunny-stage {
     position: relative;
-    width: 380px;
-    height: 520px;
+    width: 100%;
+    height: 560px;
     margin: 0 auto;
-    overflow: hidden;
     border-bottom: 8px solid var(--pink);
     display: flex;
     align-items: flex-end;
@@ -1975,13 +1974,14 @@ footer p { font-size: 14px; line-height: 1.7; opacity: .75 }
 
 /* Thỏ siêu to */
 .bunny-mascot {
-    width: auto;
+    width: 100%;
     height: 140%;
     object-fit: cover;
     position: relative;
-    z-index: 1;
+    z-index: 10;
+    mix-blend-mode: screen;
     transform-origin: bottom center;
-    transform: translateY(4%);
+    transform: translateY(2%);
     pointer-events: none;
 }
 
