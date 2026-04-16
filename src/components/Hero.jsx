@@ -20,10 +20,13 @@ export default function Hero({ onGoShop, onGoAbout }) {
 
       {/* Bunny Mascot nhảy múa */}
       <div className="hero-right">
-        <div className="bunny-stage">
-          <img
-            src="/images/bunny-mascot.png"
-            alt="Oh Bunnie Mascot"
+        <div className="bunny-stage" style={{ borderBottom: 'none', height: '420px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', pointerEvents: 'none' }}>
+          <video
+            src="/images/mascot.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
             className="bunny-mascot"
           />
         </div>
