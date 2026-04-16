@@ -18,11 +18,11 @@ export default function Hero({ onGoShop, onGoAbout }) {
         </div>
       </div>
 
-      {/* Bunny Mascot nhảy múa từ dưới Line */}
+      {/* Bunny Mascot nhảy múa (Ảnh nền đã tách trong suốt) */}
       <div className="hero-right">
         <div className="bunny-stage">
           <video
-            src="/images/mascot.mp4"
+            src="/images/mascot-rb.mov"
             autoPlay
             loop
             muted

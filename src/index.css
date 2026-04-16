@@ -1960,27 +1960,32 @@ footer p { font-size: 14px; line-height: 1.7; opacity: .75 }
     70%       { transform: scaleX(1.1); opacity: .3 }
 }
 
-/* Sân Khấu Giếng cho Thỏ Nhảy */
+/* Bệ đỡ Thỏ (Tạo Vạch Hồng làm đất đứng) */
 .bunny-stage {
     position: relative;
-    width: 340px;
-    height: 480px;
+    width: 380px;
+    height: 520px;
     margin: 0 auto;
     overflow: hidden;
-    border-bottom: 5px solid var(--pink);
+    border-bottom: 8px solid var(--pink);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-/* Thỏ Mascot bên trong */
+/* Thỏ siêu to */
 .bunny-mascot {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 140%;
     object-fit: cover;
-    mix-blend-mode: multiply;
     position: relative;
     z-index: 1;
+    transform-origin: bottom center;
+    transform: translateY(4%);
+    pointer-events: none;
 }
 
 @media(max-width:900px) {
     .hero-floating-logo { width: 52px; height: 52px; margin-bottom: 14px }
-    .bunny-stage { width: 240px; height: 340px }
+    .bunny-stage { width: 260px; height: 360px }
 }
