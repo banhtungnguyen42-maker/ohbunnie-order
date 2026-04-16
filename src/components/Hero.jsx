@@ -16,7 +16,7 @@ export default function Hero({ onGoShop, onGoAbout }) {
       </div>
 
       <div className="hero-right">
-        <div className="hero-polaroid hi3">
+        <div className="hero-polaroid">
           <img src="/images/me-banh-moi.jpg" alt="Oh Bunnie — Panna Cotta thủ công" />
           <div className="hero-polaroid-caption">Oh Bunnie ✦ @ohbunnie.sop</div>
         </div>
