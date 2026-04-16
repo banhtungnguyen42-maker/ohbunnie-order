@@ -1826,6 +1826,7 @@ footer p { font-size: 14px; line-height: 1.7; opacity: .75 }
 
 .hero-polaroid img {
     width: 100%;
+    height: auto !important;
     aspect-ratio: 4/5;
     object-fit: cover;
     display: block;
