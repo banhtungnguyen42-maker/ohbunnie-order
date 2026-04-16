@@ -24,7 +24,7 @@ export default function Hero({ onGoShop, onGoAbout }) {
       <div className="hero-right">
         <div className="bunny-stage">
           <ChromaKeyVideo
-            src="/images/mascot-green.webm"
+            src="/images/mascot.webm"
             className="bunny-mascot"
           />
         </div>
