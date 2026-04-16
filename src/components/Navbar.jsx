@@ -9,16 +9,14 @@ export default function Navbar({ page, setPage, cartCount, onOpenCart, onGotoOrd
     return () => window.removeEventListener('scroll', handler);
   }, []);
 
-  const scrollToShop = () => {
-    setPage('main');
-    setTimeout(() => document.getElementById('shop')?.scrollIntoView({ behavior: 'smooth' }), 50);
-  };
-
   return (
     <>
       {/* Top nav */}
       <nav className={`topnav${scrolled ? ' scrolled' : ''}`} id="topNav">
-        <button className="nav-logo" onClick={() => setPage('main')}>Oh Bunnie</button>
+        <button className="nav-logo" onClick={() => setPage('main')}>
+          <img src="/images/logo shop.jpg" alt="Oh Bunnie Logo" className="nav-logo-img" />
+          Oh Bunnie
+        </button>
         <ul className="nav-links">
           <li><button className={`ntab${page === 'main' ? ' active' : ''}`} onClick={() => setPage('main')}>Menu &amp; Đặt hàng</button></li>
           <li><button className={`ntab${page === 'about' ? ' active' : ''}`} onClick={() => setPage('about')}>Về Oh Bunnie</button></li>

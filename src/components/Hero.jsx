@@ -2,6 +2,9 @@ export default function Hero({ onGoShop, onGoAbout }) {
   return (
     <section className="hero" style={{ padding: 0 }}>
       <div className="hero-left">
+        {/* Logo lơ lửng xoay nhẹ */}
+        <img src="/images/logo shop.jpg" alt="Oh Bunnie Logo" className="hero-floating-logo" />
+
         <span className="hero-tag hi1">Homemade · Handcrafted · HCMC</span>
         <h1 className="hi2">
           Panna Cotta<br /><em>thuần khiết</em><br />từ Oh Bunnie
@@ -15,10 +18,14 @@ export default function Hero({ onGoShop, onGoAbout }) {
         </div>
       </div>
 
+      {/* Bunny Mascot nhảy múa */}
       <div className="hero-right">
-        <div className="hero-polaroid">
-          <img src="/images/me-banh-moi.jpg" alt="Oh Bunnie — Panna Cotta thủ công" />
-          <div className="hero-polaroid-caption">Oh Bunnie ✦ @ohbunnie.sop</div>
+        <div className="bunny-stage">
+          <img
+            src="/images/bunny-mascot.png"
+            alt="Oh Bunnie Mascot"
+            className="bunny-mascot"
+          />
         </div>
       </div>
     </section>
