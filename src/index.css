@@ -1982,6 +1982,8 @@ footer p { font-size: 14px; line-height: 1.7; opacity: .75 }
     position: relative;
     z-index: 10;
     pointer-events: none;
+    mix-blend-mode: screen; /* Khử Đen triệt để (Black -> Transparent) */
+    filter: drop-shadow(0 20px 30px rgba(216,129,143, 0.4)) contrast(1.1); /* Phủ lại bóng hồng và tăng tương phản để Thỏ không bị mờ/trong suốt (bù trừ lại cho lệnh screen) */
 }
 
 @media(max-width:900px) {
