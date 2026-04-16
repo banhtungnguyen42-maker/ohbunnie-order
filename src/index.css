@@ -1935,8 +1935,8 @@ footer p { font-size: 14px; line-height: 1.7; opacity: .75 }
 }
 
 .hero-floating-logo {
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: var(--sh-lg);
@@ -1947,11 +1947,11 @@ footer p { font-size: 14px; line-height: 1.7; opacity: .75 }
 
 /* ─── BUNNY MASCOT ───────────────────────────────────────────── */
 @keyframes bunnyBounce {
-    0%, 100% { transform: translateY(0) scaleY(1) }
-    40%       { transform: translateY(-28px) scaleY(1.04) }
-    55%       { transform: translateY(-24px) scaleY(1.04) }
-    70%       { transform: translateY(0) scaleY(.94) }
-    80%       { transform: translateY(-6px) scaleY(1) }
+    0%, 100% { transform: translateY(0) }
+    40%       { transform: translateY(-28px) }
+    55%       { transform: translateY(-24px) }
+    70%       { transform: translateY(0) }
+    80%       { transform: translateY(-6px) }
 }
 
 @keyframes bunnyShadow {
