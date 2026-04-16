@@ -14,14 +14,11 @@ export default function Hero({ onGoShop, onGoAbout }) {
           <button className="btn-ol" onClick={onGoAbout}>Về Oh Bunnie</button>
         </div>
       </div>
+
       <div className="hero-right">
-        <img
-          src="https://lh3.googleusercontent.com/lSZPlEtOEHn1G3gSf9tSTMNCTMQ2sL8JZ6isOZEsM9QUeW9q_lrC2edRA5kRBzybMKXvuEV_sb3XxjeiMOrelfByT9NFwUlM=rw-w1587"
-          alt="Oh Bunnie"
-          loading="lazy"
-        />
-        <div className="hero-badge hbadge">
-          <strong>Oh Bunnie</strong>@ohbunnie.sop
+        <div className="hero-polaroid hi3">
+          <img src="/images/me-banh-moi.jpg" alt="Oh Bunnie — Panna Cotta thủ công" />
+          <div className="hero-polaroid-caption">Oh Bunnie ✦ @ohbunnie.sop</div>
         </div>
       </div>
     </section>

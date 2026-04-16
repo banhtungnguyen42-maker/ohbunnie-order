@@ -26,9 +26,10 @@ export default function AboutPage({ setPage, gotoOrder }) {
       <section className="sec" style={{ background: 'var(--cream)' }}>
         <div className="about-grid">
           <div className="about-imgs rev fl">
-            <img src="https://lh3.googleusercontent.com/Eac5kJpHhKieHe33Xz_-xKAxjTt-JhHy3PZK-kNtfXju1lJiToJgfuN4dEyOih6jNc4eUIT214uufPCUuk0D1bsaUjuA06C7tw=rw-w1587" alt="" loading="lazy" />
-            <img src="https://lh3.googleusercontent.com/upAQU2RfS1tLnXGcnQW-6eNBHC5rznhAAytBdHfTrdFsWjgueAwlZLwlr4khQhECKNFZFHWiItJr9=rw-w1587" alt="" loading="lazy" />
-            <img src="https://lh3.googleusercontent.com/Xu_4OCYNgw4sJN4ZwxechggGp1Sc41HoQGlwLHSIB_3Xm69CgKAo1FfWsHi0Tf3zn5uO76HcfzLCuLE6BqPAxw_HBV7qrKVhuQ=rw-w1587" alt="" loading="lazy" />
+            {/* Ảnh dọc chiếm cả 2 hàng bên trái */}
+            <img className="about-img-tall" src="/images/me-banh-moi.jpg" alt="Oh Bunnie làm bánh" loading="lazy" />
+            {/* Ảnh vuông bên phải */}
+            <img className="about-img-sq" src="/images/mini6.jpg" alt="Khay 6 hũ panna cotta" loading="lazy" />
           </div>
           <div className="about-text rev fr">
             <div>

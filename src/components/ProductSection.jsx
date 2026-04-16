@@ -44,7 +44,15 @@ export default function ProductSection({ cart, onOpenModal, onOpenCart, onScroll
       <p className="sec-sub rev d2" style={{ marginBottom: 32 }}>Bấm vào sản phẩm để xem chi tiết và thêm vào giỏ !</p>
 
       <div className="pbanner rev">
-        <span>@ohbunnie.sop ✦ Panna Cotta</span>
+        {/* Track lặp 2 lần để chữ nối đuôi không đứt */}
+        <div className="pbanner-track">
+          {[0, 1].map(n => (
+            <span key={n} className="pbanner-item" aria-hidden={n === 1}>
+              @ohbunnie.sop ✨ Panna Cotta Thủ Công ✨ Thơm Ngon Thuần Khiết ✨ Không Chất Bảo Quản ✨&nbsp;
+              @ohbunnie.sop ✨ Panna Cotta Thủ Công ✨ Thơm Ngon Thuần Khiết ✨ Không Chất Bảo Quản ✨&nbsp;
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="psec-h rev">

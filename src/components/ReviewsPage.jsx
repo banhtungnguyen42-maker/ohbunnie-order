@@ -1,17 +1,15 @@
 import { useEffect } from 'react';
 import Footer from './Footer';
 
-const REVIEWS = [
-  { text: '"Bánh ngon lắm, mua lần 2 rồi mà vẫn mê!"', author: 'Khách hàng A', date: 'Thêm tên thật sau', av: 'A' },
-  { text: '"Mua làm quà, ai cũng khen ngon và đóng gói xinh!"', author: 'Khách hàng B', date: 'Thêm tên thật sau', av: 'B' },
-  { text: '"Vị chanh dây chua ngọt hợp gu quá!"', author: 'Khách hàng C', date: 'Thêm tên thật sau', av: 'C' },
-];
-
-const GALLERY = [
-  'https://lh3.googleusercontent.com/lSZPlEtOEHn1G3gSf9tSTMNCTMQ2sL8JZ6isOZEsM9QUeW9q_lrC2edRA5kRBzybMKXvuEV_sb3XxjeiMOrelfByT9NFwUlM=rw-w1587',
-  'https://lh3.googleusercontent.com/Eac5kJpHhKieHe33Xz_-xKAxjTt-JhHy3PZK-kNtfXju1lJiToJgfuN4dEyOih6jNc4eUIT214uufPCUuk0D1bsaUjuA06C7tw=rw-w1587',
-  'https://lh3.googleusercontent.com/upAQU2RfS1tLnXGcnQW-6eNBHC5rznhAAytBdHfTrdFsWjgueAwlZLwlr4khQhECKNFZFHWiItJr9=rw-w1587',
-  'https://lh3.googleusercontent.com/Xu_4OCYNgw4sJN4ZwxechggGp1Sc41HoQGlwLHSIB_3Xm69CgKAo1FfWsHi0Tf3zn5uO76HcfzLCuLE6BqPAxw_HBV7qrKVhuQ=rw-w1587',
+const FEEDBACK_IMGS = [
+  '/images/feedback-1.jpg',
+  '/images/feedback-2.jpg',
+  '/images/feedback-3.png',
+  '/images/feedback-4.png',
+  '/images/feedback-5.png',
+  '/images/feedback-6.jpg',
+  '/images/feedback-7.jpg',
+  '/images/feedback-8.jpg',
 ];
 
 export default function ReviewsPage({ setPage, gotoOrder }) {
@@ -29,37 +27,26 @@ export default function ReviewsPage({ setPage, gotoOrder }) {
 
   return (
     <div id="page-reviews" style={{ paddingTop: 64 }}>
-      <section className="sec" style={{ background: 'var(--pink3)' }}>
+
+      {/* ── Masonry Gallery ── */}
+      <section className="sec" style={{ background: 'var(--cream)' }}>
         <div style={{ textAlign: 'center' }}>
-          <span className="sec-tag">Khách hàng nói gì</span>
-          <h2 className="sec-title">Cảm nhận thật từ khách hàng</h2>
+          <span className="sec-tag rev">Feedback thật từ khách hàng</span>
+          <h2 className="sec-title rev d1">Ảnh & cảm nhận từ Oh Bunnie</h2>
+          <p className="sec-sub rev d2" style={{ margin: '0 auto 8px', textAlign: 'center' }}>
+            Mỗi hũ bánh là một niềm vui — cùng xem khách hàng nói gì nhé !
+          </p>
         </div>
-        <div className="fb-grid">
-          {REVIEWS.map((r, i) => (
-            <div key={i} className={`fb-card rev d${i + 1}`}>
-              <div className="fb-stars">★★★★★</div>
-              <p className="fb-text">{r.text}</p>
-              <div className="fb-auth">
-                <div className="fb-av">{r.av}</div>
-                <div>
-                  <div className="fb-name">{r.author}</div>
-                  <div className="fb-date">{r.date}</div>
-                </div>
-              </div>
+
+        <div className="masonry-grid">
+          {FEEDBACK_IMGS.map((src, i) => (
+            <div key={i} className="masonry-item rev">
+              <img src={src} alt={`Feedback ${i + 1}`} loading="lazy" />
             </div>
           ))}
         </div>
-      </section>
 
-      <section className="sec" style={{ background: 'var(--white)', borderTop: '1px solid var(--line)' }}>
-        <span className="sec-tag rev">Ảnh sản phẩm</span>
-        <h2 className="sec-title rev d1">Một chút hình ảnh từ Oh Bunnie</h2>
-        <div className="gallery-grid">
-          {GALLERY.map((src, i) => (
-            <img key={i} src={src} alt="" loading="lazy" />
-          ))}
-        </div>
-        <div style={{ textAlign: 'center', marginTop: 40 }}>
+        <div style={{ textAlign: 'center', marginTop: 48 }}>
           <button className="btn-pk" onClick={gotoOrder}>Đặt hàng ngay ✦</button>
         </div>
       </section>
