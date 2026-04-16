@@ -22,7 +22,7 @@ export default function Hero({ onGoShop, onGoAbout }) {
       <div className="hero-right">
         <div className="bunny-stage">
           <video
-            src="/images/mascot-rb.mov"
+            src="/images/mascot-rb.webm"
             autoPlay
             loop
             muted
