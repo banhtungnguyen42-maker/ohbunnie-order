@@ -48,7 +48,9 @@ export default function OrderSection({ cart, editingId, setEditingId, onEdit, on
 
     setLoyaltyStatus('<div class="lbox checking">⏳ Đang kiểm tra điểm...</div>');
     try {
-      const res = await fetch(`${API_URL}?action=loyalty&email=${encodeURIComponent(el)}`);
+      const res = await fetch(`${API_URL}?action=loyalty&email=${encodeURIComponent(el)}`, {
+        redirect: 'follow',
+      });
       const data = await res.json();
       setLoyaltyCache({ email: el, count: data.count, eligible: data.eligible, checked: true });
       setLoyaltyStatus(
@@ -121,6 +123,8 @@ export default function OrderSection({ cart, editingId, setEditingId, onEdit, on
     try {
       const res = await fetch(API_URL, {
         method: 'POST',
+        redirect: 'follow',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(data),
       });
       const result = await res.json();
